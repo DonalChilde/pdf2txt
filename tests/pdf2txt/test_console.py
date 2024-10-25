@@ -1,9 +1,11 @@
 """Test cases for the console module."""
 
-import pytest
-from click.testing import CliRunner
+from pathlib import Path
 
-from pdf2txt import pdf2txt_cli
+import pytest
+from typer.testing import CliRunner
+
+from pdf2txt.pdf2txt_cli import app
 
 
 @pytest.fixture
@@ -12,7 +14,8 @@ def runner() -> CliRunner:
     return CliRunner()
 
 
-def test_main_succeeds(runner: CliRunner) -> None:
+def test_extract(runner: CliRunner) -> None:
     """It exits with a status code of zero."""
-    result = runner.invoke(pdf2txt_cli.main)
+    result = runner.invoke(app, ["extract", "/tmp", "/tmp"])
+    print(result.stdout)
     assert result.exit_code == 0

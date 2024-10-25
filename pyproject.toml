@@ -29,7 +29,7 @@ dependencies = [
 ]
 
 [project.scripts]
-pdf2txt = "pdf2txt.pdf2txt_cli:main"
+pdf2txt = "pdf2txt.pdf2txt_cli:app"
 
 [project.urls]
 Documentation = "https://github.com/DonalChilde/pdf2txt#readme"
@@ -107,3 +107,6 @@ format = "md"
 md_header_level = "2"
 entry_title_template = "file: changelog.d/templates/entry_title_template.md.j2"
 new_fragment_template = "file: changelog.d/templates/new_fragment.${config:format}.j2"
+
+[tool.pytest.ini_options]
+pythonpath = "src"
