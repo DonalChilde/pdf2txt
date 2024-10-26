@@ -1,7 +1,6 @@
 from importlib import resources
 from pathlib import Path
 
-import pytest
 from tests.resources import RESOURCES_ANCHOR
 from typer.testing import CliRunner
 
@@ -18,8 +17,12 @@ def test_extract_pdf(runner: CliRunner, test_output_dir: Path):
     output_path = test_output_dir.joinpath(Path("2024_11_LGA/extract"), DATA_FILE_NAME)
     output_path = output_path.with_suffix(".txt")
     with resources.as_file(file_resource) as input_path:
-        result = runner.invoke(app, ["extract", str(input_path), str(output_path)])
+        result = runner.invoke(
+            app, ["-vvv", "extract", str(input_path), str(output_path)]
+        )
+        assert "Verbosity: 3" in result.stdout
         print(result.stdout)
         if result.stderr_bytes is not None:
             print(result.stderr)
         assert result.exit_code == 0
+    # assert False
