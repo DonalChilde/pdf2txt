@@ -1,1 +1,1 @@
-RESOURCE_PATH = "tests.resources"
+RESOURCES_ANCHOR = "tests.resources"
