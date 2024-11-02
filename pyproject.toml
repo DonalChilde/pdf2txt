@@ -29,7 +29,7 @@ dependencies = [
 ]
 
 [project.scripts]
-pdf2txt = "pdf2txt.pdf2txt_cli:app"
+pdf2txt = "pdf2txt.cli.main:app"
 
 [project.urls]
 Documentation = "https://github.com/DonalChilde/pdf2txt#readme"

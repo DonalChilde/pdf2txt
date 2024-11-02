@@ -10,14 +10,10 @@ from pdf2txt.extract import extract_text_from_pdf_to_file
 from pdf2txt.snippets.sizeof_fmt import sizeof_fmt
 from pdf2txt.snippets.task_complete_typer import task_complete
 
-app = typer.Typer()
-
-
 # TODO support extracting text to command line - pipe.
 
 
-@app.callback()
-def cli(
+def default_options(
     ctx: typer.Context,
     debug: Annotated[bool, typer.Option(help="Enable debug output.")] = False,
     verbosity: Annotated[int, typer.Option("-v", help="Verbosity.", count=True)] = 1,
@@ -29,6 +25,9 @@ def cli(
     ctx.obj["DEBUG"] = debug
     typer.echo(f"Verbosity: {verbosity}")
     ctx.obj["VERBOSITY"] = verbosity
+
+
+app = typer.Typer(callback=default_options)
 
 
 @app.command()
@@ -44,7 +43,7 @@ def extract(
     ] = False,
 ):
     """
-    Extract text from a pdf file.
+    Extract text from a single pdf file.
     """
     # TODO log this instead of print
     # print(f"{locals()!r}")

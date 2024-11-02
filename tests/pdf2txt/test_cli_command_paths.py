@@ -2,7 +2,7 @@
 
 from typer.testing import CliRunner
 
-from pdf2txt.pdf2txt_cli import app
+from pdf2txt.cli.main import app
 
 
 def test_app(runner: CliRunner) -> None:

@@ -4,7 +4,7 @@ from pathlib import Path
 from tests.resources import RESOURCES_ANCHOR
 from typer.testing import CliRunner
 
-from pdf2txt.pdf2txt_cli import app
+from pdf2txt.cli.main import app
 
 DATA_FILE_NAME = "PBS_LGA_November_2024_20241010125956.pdf"
 DATA_FILE_PATH = "pdf/2024_11_LGA"
