@@ -1,4 +1,4 @@
-# Welcome to Pdf2Txt's documentation!
+# Welcome to Pdf2Txt's documentation
 
 ```{toctree}
 ---
@@ -6,13 +6,13 @@ hidden: true
 maxdepth: 1
 ---
 
-Usage <usage>
-CLI reference <pdf2txt_cli>
-API Reference <api-reference/modules.rst>
-Changelog <changelog>
-License <license>
-Contributing <contributing>
-Developer Setup <dev-setup>
+Usage <documentation/usage>
+CLI reference <documentation/cli/main.rst>
+API Reference <documentation/api-generated/modules.rst>
+Changelog <documentation/changelog.md>
+License <documentation/license>
+Contributing <documentation/contributing>
+Developer Setup <documentation/dev-setup>
 ```
 
 ```{include} ../../README.md

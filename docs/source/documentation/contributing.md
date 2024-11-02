@@ -1,6 +1,6 @@
 # Contributing
 
-```{include} ../../CONTRIBUTING
+```{include} ../../../CONTRIBUTING
 :start-after: <!-- contributing-begin -->
 :end-before: <!-- contributing-end -->
 ```

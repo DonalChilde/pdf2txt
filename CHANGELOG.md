@@ -1,8 +1,8 @@
 # Changelog
 <!-- markdownlint-disable MD024 -->
-<!-- changelog-start -->
+<!-- changelog-begin -->
 
-## [Unreleased](<https://github.com/DonalChilde/pdf2txt/0.0.0...refs/heads/dev>)
+## [Unreleased](<https://github.com/DonalChilde/pdf2txt/compare/0.0.0...dev>)
 <!-- Dont forget to:
     - Update the Unreleased compare version to latest release tag
     - Update compare/_previous_version_tag_
