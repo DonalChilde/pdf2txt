@@ -16,7 +16,7 @@ classifiers = [
 ]
 name = "pfmsoft.pdf2txt"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.13"
 license = { file = "LICENSE" }
 authors = [{ name = "Chad Lowe", email = "pfmsoft.dev@gmail.com" }]
 dynamic = ["version", "description"]
