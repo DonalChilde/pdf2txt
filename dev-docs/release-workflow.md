@@ -28,5 +28,5 @@ git push -u origin release-0.0.0
 
 # Tag the release version on the main branch
 git tag -a 0.0.0 -m "release 0.0.0"
-git push origin v0.0.0
+git push origin 0.0.0
 ```
