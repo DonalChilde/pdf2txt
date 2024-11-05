@@ -6,10 +6,10 @@ from time import perf_counter_ns
 import typer
 from typing_extensions import Annotated
 
-from pdf2txt.extract import extract_text_from_pdf_to_file
-from pdf2txt.snippets.path_delta import path_delta
-from pdf2txt.snippets.sizeof_fmt import sizeof_fmt
-from pdf2txt.snippets.task_complete_typer import task_complete
+from pfmsoft.pdf2txt.extract import extract_text_from_pdf_to_file
+from pfmsoft.pdf2txt.snippets.path_delta import path_delta
+from pfmsoft.pdf2txt.snippets.sizeof_fmt import sizeof_fmt
+from pfmsoft.pdf2txt.snippets.task_complete_typer import task_complete
 
 # TODO support extracting text to command line - pipe.
 

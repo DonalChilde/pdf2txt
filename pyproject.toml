@@ -1,5 +1,5 @@
 [build-system]
-requires = ["flit_core >=3.4,<4"]
+requires = ["flit_core >=3.10,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
@@ -14,7 +14,7 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
 
 ]
-name = "pdf2txt"
+name = "pfmsoft.pdf2txt"
 readme = "README.md"
 requires-python = ">=3.11"
 license = { file = "LICENSE" }
@@ -29,7 +29,7 @@ dependencies = [
 ]
 
 [project.scripts]
-pdf2txt = "pdf2txt.cli.main:app"
+pfmsoft-pdf2txt = "pfmsoft.pdf2txt.cli.main:app"
 
 [project.urls]
 Documentation = "https://github.com/DonalChilde/pdf2txt#readme"
@@ -110,3 +110,4 @@ new_fragment_template = "file: changelog.d/templates/new_fragment.${config:forma
 
 [tool.pytest.ini_options]
 pythonpath = "src"
+testpaths = ["tests"]
