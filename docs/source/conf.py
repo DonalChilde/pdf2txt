@@ -21,7 +21,10 @@ with open("../../pyproject.toml", "rb") as f:
     toml_data = tomllib.load(f)
 
 sys.path.insert(0, os.path.abspath("../../src"))
-from pdf2txt import __release__, __version__  # pylint: disable=wrong-import-position
+from pfmsoft.pdf2txt import (
+    __release__,
+    __version__,
+)  # pylint: disable=wrong-import-position
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
