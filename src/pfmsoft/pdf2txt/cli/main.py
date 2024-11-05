@@ -153,9 +153,9 @@ def extract_txt_from_all(
             f"PATH_OUT: {path_out} is an existing file, not a directory."
         )
     if recurse:
-        input_files = list(path_in.glob("**.pdf", case_sensitive=True))
+        input_files = list(path_in.glob("**/*.pdf", case_sensitive=False))
     else:
-        input_files = list(path_in.glob("*.pdf", case_sensitive=True))
+        input_files = list(path_in.glob("*.pdf", case_sensitive=False))
     if not input_files:
         raise typer.BadParameter(f"No pdf files were found in {path_in}")
     file_count = len(input_files)
