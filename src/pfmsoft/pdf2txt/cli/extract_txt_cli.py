@@ -52,13 +52,7 @@ def text(
             help="source pdf file.", exists=True, dir_okay=False, file_okay=True
         ),
     ],
-    path_out: Annotated[
-        Path, typer.Argument(help="destination directory for text file.")
-    ],
-    file_name: Annotated[
-        Path | None,
-        typer.Option(help="file name for output if differrent from default."),
-    ] = None,
+    path_out: Annotated[Path, typer.Argument(help="Path to the extracted text file.")],
     overwrite: Annotated[
         bool, typer.Option(help="Overwrite existing output file.")
     ] = False,
@@ -70,10 +64,6 @@ def text(
             f"input file might not be a pdf, suffix for {path_in.name} is not "
             f"'.pdf' (case insensitive)."
         )
-    if file_name:
-        path_out = path_out / Path(file_name.name)
-    else:
-        path_out = path_out / Path(path_in.name).with_suffix(".txt")
     job = ExtractJob(
         path_in=path_in, path_out=path_out, overwrite=overwrite, halt_on_fail=False
     )
