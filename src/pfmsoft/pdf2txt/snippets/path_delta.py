@@ -1,11 +1,12 @@
+"""path_delta.py."""
+
 from pathlib import Path
 
 
 def path_delta(
     source_base_path: Path, source_sub_path: Path, destination_base_path: Path
 ) -> Path:
-    """
-    Recreate sub path structure of a source dir in a destination dir.
+    """Recreate sub path structure of a source dir in a destination dir.
 
     Base paths should be directories, and the sub path can be a directory or file.
     """

@@ -1,13 +1,11 @@
-"""
-    _summary_
+"""summary_.
 
-    _extended_summary_
+_extended_summary_
 """
 
 
 def sizeof_fmt(num, suffix="B"):
-    """
-    _summary_
+    """summary_.
 
     _extended_summary_
 

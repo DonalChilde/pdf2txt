@@ -1,3 +1,5 @@
+"""task_complete.py."""
+
 from time import perf_counter_ns
 
 import typer
