@@ -1,8 +1,11 @@
+"""Extract text from pdf file."""
+
 from pathlib import Path
 
 from pdfminer.high_level import extract_text_to_fp
 from pdfminer.layout import LAParams
-from pfmsoft.snippets.file.validate_file_out import validate_file_out
+
+from pfmsoft.pdf2txt.snippets.check_file import check_file
 
 
 def extract_text_from_pdf_to_file(
@@ -11,7 +14,8 @@ def extract_text_from_pdf_to_file(
     overwrite: bool = False,
     la_params: LAParams | None = None,
 ):
-    validate_file_out(file_path=file_out, overwrite=overwrite)
+    """Extract text from a pdf file."""
+    check_file(path_out=file_out, ensure_parents=True, overwrite=overwrite)
     with (
         open(file_out, mode="w", encoding="utf-8") as fp_out,
         open(file_in, mode="rb") as fp_in,

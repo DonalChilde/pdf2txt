@@ -2,7 +2,7 @@
 
 from typer.testing import CliRunner
 
-from pfmsoft.pdf2txt.cli.main import app
+from pfmsoft.pdf2txt.cli.main_typer import app
 
 
 def test_app(runner: CliRunner) -> None:
@@ -23,9 +23,18 @@ def test_extract(runner: CliRunner) -> None:
     assert result.exit_code == 0
 
 
+def test_extract_text(runner: CliRunner) -> None:
+    """It exits with a status code of zero."""
+    result = runner.invoke(app, ["extract", "text", "--help"])
+    print(result.stdout)
+    if result.stderr_bytes is not None:
+        print(result.stderr)
+    assert result.exit_code == 0
+
+
 def test_extract_all(runner: CliRunner) -> None:
     """It exits with a status code of zero."""
-    result = runner.invoke(app, ["extract-all", "--help"])
+    result = runner.invoke(app, ["extract", "all", "--help"])
     print(result.stdout)
     if result.stderr_bytes is not None:
         print(result.stderr)

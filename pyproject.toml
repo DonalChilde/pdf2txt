@@ -24,11 +24,11 @@ dynamic = ["version", "description"]
 dependencies = [
     "typer",
     "pdfminer.six",
-    "pfmsoft-snippets@git+https://github.com/donalchilde/pfmsoft-snippets@0.0.2",
+    # "pfmsoft-snippets@git+https://github.com/donalchilde/pfmsoft-snippets@0.0.2",
 ]
 
 [project.scripts]
-pfmsoft-pdf2txt = "pfmsoft.pdf2txt.cli.main:app"
+pfmsoft-pdf2txt = "pfmsoft.pdf2txt.cli.main_typer:app"
 
 [project.urls]
 Documentation = "https://github.com/DonalChilde/pdf2txt#readme"
