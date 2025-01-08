@@ -178,7 +178,7 @@ def build_one(
     """
     if file_name is None:
         file_out = path_out / path_in.name
-        file_out.with_suffix(".txt")
+        file_out = file_out.with_suffix(".txt")
     else:
         file_out = path_out / file_name
     return ExtractJob(

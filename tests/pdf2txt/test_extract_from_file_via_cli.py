@@ -13,15 +13,15 @@ DATA_FILE_NAME = "sample.pdf"
 
 
 def test_extract_pdf(runner: CliRunner, test_output_dir: Path):
-    """Test extracting tet from a pdf file via the cli."""
+    """Test extracting text from a pdf file via the cli."""
     file_resource = resources.files(PDF_ANCHOR).joinpath(DATA_FILE_NAME)
     with resources.as_file(file_resource) as input_path:
-        output_path = test_output_dir.joinpath(
-            Path("extract_from_file"), input_path.stem
-        )
-        output_path = output_path.with_suffix(".txt")
+        output_file = Path(input_path.name).with_suffix(".txt")
+        output_dir = test_output_dir / "extract_from_file"
+        output_path = output_dir / output_file
+
         result = runner.invoke(
-            app, ["-vvv", "extract", "text", str(input_path), str(output_path)]
+            app, ["-vvv", "extract", str(input_path), str(output_dir)]
         )
         assert "Verbosity: 3" in result.stdout
         print(result.stdout)

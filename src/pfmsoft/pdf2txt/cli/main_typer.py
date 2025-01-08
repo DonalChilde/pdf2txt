@@ -8,8 +8,6 @@ from typing import Annotated
 
 import typer
 
-from pfmsoft.pdf2txt.cli import extract_txt_cli
-
 from .default_callback import base_options
 from .extract import app as extract_app
 
