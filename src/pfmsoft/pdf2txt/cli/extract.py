@@ -24,8 +24,6 @@ from pfmsoft.pdf2txt import APP_NAME
 from pfmsoft.pdf2txt.extract_txt import extract_text_from_pdf_to_file
 from pfmsoft.pdf2txt.snippets.task_complete_typer import task_complete
 
-# TODO support extracting text to command line - pipe.
-
 progress = Progress(
     SpinnerColumn(),
     TextColumn("[progress.description]{task.description}"),
